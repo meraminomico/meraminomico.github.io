@@ -15,12 +15,18 @@ table{
 h2{
     background-color: rgb(245, 195, 69);
     padding-left:10px;
+    animation: myfirst 3s; 
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
 }
 
 h3{
     background-color: rgb(245, 195, 69);
     padding-left:10px;
-    font-size: 24px
+    font-size: 24px;
+    animation: myfirst 3s;
+    animation-direction:alternate;
+    animation-iteration-count: infinite;
 }
 
 
@@ -30,5 +36,51 @@ h3{
     margin: 0 auto;
     padding: 10px 20px;
     margin-top: 0;
-    background-image: url("http://www.dabaoku.com/sucai/beijing/diwentiaowen/250jp.jpg")
+    background-image: url("http://file03.16sucai.com/2016/10/1100/16sucai_v20161101052_16d.JPG")
     ;height:100%}
+
+.tp{
+    text-align:center;    
+    animation-name: fadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: alternate;
+}
+
+@-webkit-keyframes myfirst /* Safari 和 Chrome */
+{
+from {background: rgb(194, 13, 13);}
+to {background: rgb(245, 195, 69);}
+}
+
+@-webkit-keyframes fadeInOut {
+    0% {
+        opacity:1;
+     }
+    25% {
+        opacity:0;
+    }
+    50% {
+        opacity: 0;    
+    }
+    75% {
+        opacity:1;
+    }
+}
+
+.left{
+    width:120px;
+    background-color: #1b53ec;
+    float: left;
+    height: 120px;
+    margin-top: 0px;
+    padding:0px;
+    position: fixed;
+    z-index: 999;
+}
+@media (max-width:900px) {
+    .left {
+        display:none
+    }
+}
